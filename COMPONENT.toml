@@ -3,7 +3,7 @@ name = "SigmaOS-airbyte2"
 tier = 2
 stability = "scaffold"
 language = "rust"
-description = "airbyte2 component"
+description = "Airbyte data integration compatibility layer for SigmaOS"
 upstream = []
 
 [contract]
