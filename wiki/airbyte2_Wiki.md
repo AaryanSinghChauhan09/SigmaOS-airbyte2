@@ -1,65 +1,50 @@
-# SigmaOS-airbyte2 Component Wiki
+# SigmaOS-SigmaOS-airbyte2 Component Wiki
 
 ## Overview
-SigmaOS-airbyte2 provides Airbyte2 data integration and ETL support for the SigmaOS operating system. It demonstrates the data integration subsystem and ETL pipelines within the SigmaOS ecosystem, following the principles of clear abstraction and deterministic data initialization.
+SigmaOS-SigmaOS-airbyte2 provides Airbyte data integration compatibility layer for SigmaOS for the SigmaOS operating system. It demonstrates the subsystem and integration within the SigmaOS ecosystem, following the principles of clear abstraction and deterministic initialization.
 
 ## Principles
 - Single Responsibility
-- Data Integration Abstraction
-- Fail-Fast on Data Initialization Errors
-- Deterministic Data Setup
-- Clear Abstraction Over Data APIs
-- Composition over Inheritance for data extensions
+- SigmaOS-airbyte2 Abstraction
+- Fail-Fast on SigmaOS-airbyte2 Initialization Errors
+- Deterministic SigmaOS-airbyte2 Setup
+- Clear Abstraction Over SigmaOS-airbyte2 APIs
+- Composition over Inheritance for SigmaOS-airbyte2 extensions
 
 ## Architecture
-SigmaOS-airbyte2 follows a data integration pattern:
-- **Integration Core**: Provides connector management, data transformation, and ETL pipeline orchestration
-- **Connector System**: Supports source connectors, destination connectors, and data format handling
-- **Pipeline Orchestration**: Supports scheduled ETL jobs, data transformation, and error recovery
-- **Error Handling**: Fail-fast on invalid data configurations or unsupported connector types
+SigmaOS-SigmaOS-airbyte2 follows a SigmaOS-airbyte2 pattern:
+- **SigmaOS-airbyte2 Core**: Provides SigmaOS-airbyte2 support, SigmaOS-airbyte2 management, and SigmaOS-airbyte2 tracking
+- **Management**: Supports SigmaOS-airbyte2 management, SigmaOS-airbyte2 configuration, and SigmaOS-airbyte2 lifecycle
+- **Tracking**: Supports SigmaOS-airbyte2 status, SigmaOS-airbyte2 tracking, and SigmaOS-airbyte2 lifecycle
+- **Error Handling**: Fail-fast on invalid SigmaOS-airbyte2 configurations or unsupported SigmaOS-airbyte2 types
 
 ## API
 The component provides the following public APIs:
-- `integration::connector::add(name, config)` - Add a data connector with given name and configuration
-- `integration::pipeline::create(name, steps)` - Create an ETL pipeline with given name and steps
-- `integration::sync::run(spec)` - Run a data synchronization job with given specification
-- `integration::status::connectors()` - Get connector status and pipeline status
-- Error types for data failure scenarios or unsupported connector types
+-  - Manage a SigmaOS-airbyte2 by given configuration
+-  - Register a SigmaOS-airbyte2 by given name
+-  - Get SigmaOS-airbyte2 status and SigmaOS-airbyte2 availability
+-  - Track SigmaOS-airbyte2 management and SigmaOS-airbyte2 tracking
+- Error types for SigmaOS-airbyte2 failure scenarios or unsupported SigmaOS-airbyte2 types
 
 ## Test Structure (Arrange-Act-ASSERT)
 All tests follow the AAA pattern:
-1. **Arrange**: Set up test environment with specific data integration configuration
-2. **Act**: Execute the code under test (connector addition, pipeline creation)
-3. **Assert**: Verify the expected data results
+1. **Arrange**: Set up test environment with specific SigmaOS-airbyte2 configuration
+2. **Act**: Execute the code under test (SigmaOS-airbyte2 init, SigmaOS-airbyte2 management)
+3. **Assert**: Verify the expected SigmaOS-airbyte2 results
 
 Example:
-```rust
-#[test]
-fn test_integration_connector_aaa() {
-    // Arrange
-    let connector_name = "postgres-source";
-    let connector_config = ConnectorConfig::new().with_database("mydb").with_table("records");
-    
-    // Act
-    let result = integration::connector::add(connector_name, connector_config);
-    
-    // Assert
-    assert!(result.is_ok());
-    let added = result.unwrap();
-    assert!(added.is_valid());
-}
-```
+
 
 ## Development
-- Follows Rust best practices with `#![forbid(unsafe_code)]`
-- Data initialization is best-effort; gracefully degrades on unsupported configurations
-- Comprehensive error types for all data failure scenarios
-- Unit tests provided for connector management and pipeline creation
-- Integration tests for full data integration system with actual connector integration
+- Follows Rust best practices with 
+- SigmaOS-airbyte2 initialization is best-effort; gracefully degrades on unsupported configurations
+- Comprehensive error types for all SigmaOS-airbyte2 failure scenarios
+- Unit tests provided for SigmaOS-airbyte2 management and configuration
+- Integration tests for full SigmaOS-airbyte2 system with actual SigmaOS-airbyte2 integration
 
 ## TODO
-- Add support for additional connector types (Kafka, S3, PostgreSQL, MySQL, Redis)
-- Expand pipeline capabilities ( transformations, filtering, aggregation)
-- Add synchronization features (incremental sync, change data capture, conflict resolution)
-- Create integration tests with actual data connector systems
-- Implement connector persistence and pipeline state management
+- Add support for additional SigmaOS-airbyte2 types
+- Expand SigmaOS-airbyte2 capabilities (SigmaOS-airbyte2 features, SigmaOS-airbyte2 configurations, SigmaOS-airbyte2 tracking)
+- Add lifecycle features (SigmaOS-airbyte2 tracking, SigmaOS-airbyte2 lifecycle, SigmaOS-airbyte2 propagation)
+- Create integration tests with actual SigmaOS-airbyte2 systems and SigmaOS-airbyte2 integration
+- Implement SigmaOS-airbyte2 persistence and SigmaOS-airbyte2 state management
