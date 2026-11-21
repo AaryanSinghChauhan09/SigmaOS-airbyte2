@@ -1,16 +1,16 @@
 [component]
-name = "SigmaOS-airbyte2"
+name = "SigmaOS-airbyte"
 tier = 2
-stability = "scaffold"
-language = "rust"
-description = "Airbyte data integration compatibility layer for SigmaOS"
+stability = "beta"
+language = "shell"
+description = "SigmaOS integration for Airbyte data integration: package management, config deployment, and CLI helpers."
 upstream = []
 
 [contract]
-provides = ["component"]
+provides = ["app-manager:airbyte"]
 depends_on = []
 
 [maturity]
 status = "Implemented"
-test_evidence = "Compiles and passes AAA unit tests"
-next_milestone = "Hardware and runtime integration"
+test_evidence = "test.sh: syntax + metadata + isolated-HOME lifecycle checks"
+next_mestone = "Per-app config polish"
